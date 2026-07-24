@@ -1,3 +1,4 @@
+
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -14,21 +15,25 @@ h2 {
     font-size: 1.2em;
     text-align: center;
 }
-nav {
+ nav {
     width: 100%;
     padding: 10px 0;
     display: grid;
     grid-template: "borde-izq logo-escudo  espacio-central title-page borde-der" 120px/
-                    10px       60px        0             280px      5px;
-}
+                    10px       60px        5px               auto     5px;
+} 
 .logo-escudo {
     grid-area: logo-escudo;
     width: 100%;
     display: flex;
     align-items: center;
 }
+.img-logo-escudo {
+    width: 100%;
+}
 .title-page {
     grid-area: title-page;
+    width: 100%;
 }
 .title-experiencias, .title-secretaria {
     color: rgb(9,67,181);
@@ -45,10 +50,8 @@ nav {
 }
 .box-escudo-nombre {
     width: 75%;
-   box-shadow: rgba(50, 50, 93, 0.25) 5px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-.box-escudo {
-    height: 400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 5px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding-top: 20px;
 }
 .div-escudo {
     display: flex;
@@ -73,4 +76,50 @@ nav {
     color: white;
 /*     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px; */
+}
+@media only screen and (min-width: 430px) {
+    nav {
+    grid-template: "borde-izq logo-escudo  espacio-central title-page borde-der" 120px/
+                    30px       60px        5px               auto     5px;
+    }
+    .colegio {
+        width: 300px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .colegios {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .box-escudo {
+        height: 100%;
+    }
+    .box-escudo-nombre {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .title-experiencias {
+        font-size: 2em;
+    }
+    .title-secretaria {
+        font-size: 1.4em;
+    }
+    .logo-escudo {
+        width: 80px;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+/*     nav {
+        height: 180px;
+    } */
+}
+@media only screen and (min-width: 1024px) {
+    nav {
+        height: 180px;
+        margin-top: 15px;
+    }
 }
