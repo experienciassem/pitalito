@@ -6,6 +6,26 @@ a {
     text-decoration: none;
     color: black;
 }
+.box-boton-regresar {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 12px;
+}
+.icon-back {
+    width: 20px;
+    margin-right: 8px;
+}
+.boton-regresar {
+    margin-right: 20px;
+    padding: 10px;
+    background-color: darkcyan;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 500;
+}
 .colegios {
     margin-top: 0;
     padding-top: 0;
@@ -86,6 +106,10 @@ nav {
     }
 }
 @media only screen and (min-width: 750px) {
+    .boton-regresar {
+        margin-right: 40px;
+        margin-bottom: 25px;
+    }
     .listado-experiencias {
         display: flex;
         flex-wrap: wrap;
